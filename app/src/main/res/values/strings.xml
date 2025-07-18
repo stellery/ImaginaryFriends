@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ImaginaryFriends</string>
+    <string name="title_activity_friend">Friend Card</string>
+    <string name="main_message_on_friends_updated">Hooray, you have got new friends!</string>
+</resources>

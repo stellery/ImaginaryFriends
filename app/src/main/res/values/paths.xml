@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="internet_request">https://randomuser.me/api/?results=17&amp;inc=name,email,phone,dob,location,picture</string>
+    <string name="contacts_file">myfriends.json</string>
+    <string name="contacts_avatar_filemask">avatars/userXX.jpg</string>
+</resources>
