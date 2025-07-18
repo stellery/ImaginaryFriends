@@ -1,7 +1,6 @@
 package com.stellery.imaginaryfriends
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,7 +11,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -33,10 +31,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.input.KeyboardType.Companion.Uri
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
@@ -108,6 +104,7 @@ fun ContactCard (contact: Contact, modifier: Modifier = Modifier) {
                 .align(Alignment.CenterHorizontally),
             fontSize = 17.sp, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.secondary
         )
+        // make a clickable textfield to make a phonecall
         Text(
             text = "tel: ${contact.phone}",
             modifier = Modifier.padding(vertical = 2.dp, horizontal = 10.dp)
@@ -116,6 +113,7 @@ fun ContactCard (contact: Contact, modifier: Modifier = Modifier) {
                     .setData("tel:${contact.phone}".toUri()))},
             fontSize = 20.sp, textAlign = TextAlign.Center
         )
+        // make a clickable textfield to send Email
         Text(
             text = "email: ${contact.email}",
             modifier = Modifier.padding(top = 3.dp, bottom = 10.dp, start = 10.dp, end = 10.dp)
