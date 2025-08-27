@@ -42,7 +42,7 @@ class FriendActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         var contact = Contact.getTestContact()
         super.onCreate(savedInstanceState)
-        //корявка
+
         val contactString = intent.getStringExtra(Contact.EXTRA_KEY_CONTACT)
         if (contactString != null)
             contact = Contact.fromJson(contactString)
@@ -57,7 +57,7 @@ class FriendActivity : ComponentActivity() {
                         onClick = {
                         finish()
                     }) {
-                        Icon(Icons.Default.Done, contentDescription = "Add")
+                        Icon(Icons.Default.Done, contentDescription = "Done")
                     }
                 }) { innerPadding ->
                     ContactCard(contact, Modifier.padding(innerPadding))

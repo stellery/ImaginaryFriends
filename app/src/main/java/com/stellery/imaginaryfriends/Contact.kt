@@ -32,6 +32,12 @@ data class Contact (var name: Name,
             return testobj
         }
 
+        fun getDefaultContactList(): List <Contact> {
+            var contactList = ArrayList<Contact>()
+            contactList.add(getTestContact())
+            return contactList
+        }
+
         fun fromJson (str: String): Contact {
             return Json.decodeFromString(str)
         }

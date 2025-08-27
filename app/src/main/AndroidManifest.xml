@@ -15,13 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ImaginaryFriends">
-        <service
-            android:name=".DataIntentService"
-            android:exported="false"></service>
-
         <activity
             android:name=".FriendActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_friend"
             android:theme="@style/Theme.ImaginaryFriends" />
         <activity
